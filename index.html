@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <title>Calculadora IMC</title>
+
+        <link rel="stylesheet" href="css/Estilização.css">
+
+<!-- se colocar a tag script no inicio do código, coloque o atributo boleano
+async para que o carregamento seja feito rápido ou coloque ele no final do código 
+depois do </body>. não deve ser usado na falta do src, pois não terá efeito
+
+o async permite que o download do scrip seja feito de modo assíncrono em paralelo 
+com o HTML
+
+Defer: Assim como ocorre com o async, com o defer o download do script é feito 
+de forma assíncrona, mas sua execução ocorre apenas quando todo o processo 
+de renderização estiver concluído, como o própio nome desse atributo informa 
+(to defer=adiar), ele “adia” algo, que no caso se refere a execução do script.
+
+se o código estiver muito grande, é bom por após o body
+-->
+
+        <script src="Funções.js" async></script>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    </head>
+    
+    
+    <body>
+        
+      <div class="container">
+        <h1>Calcule seu IMC</h1>
+        
+        <form>
+          
+          <div class="container-calculadora-peso">
+            <p>Digite seu peso</p>      
+            <input id="peso" class="input-number" type="number"/>
+            <span>Kg</span>
+          </div>
+          
+          <div class="container-calculadora-altura">
+            <p>Digite sua altura</p>             
+            <input id="altura" class="input-number" type="number"/>
+            <span>Cm</span>
+            </div>
+          <div>
+          <input id="btncalcular" class="botao-calcular" type="button" value="Calcular"/>
+          </div>
+          </form>
+        <div id="resultado"></div>
+          </div>
+      
+    </body>
+    
+  </html>
